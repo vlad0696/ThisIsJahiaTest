@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
+    <modules jcr:primaryType="jnt:modules">
+        <test j:dependencies="bootstrap3-components bootstrap3-core default"
+            j:installedModules="test"
+            j:modulePriority="0"
+            j:moduleType="templatesSet"
+            j:title="test"
+            jcr:mixinTypes="jmix:hasExternalProviderExtension"
+            jcr:primaryType="jnt:module">
+                <sources jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                  jcr:primaryType="jnt:moduleVersionFolder"
+                  j:staticMountPointProviderKey="module-test-1.0-SNAPSHOT">
+                    <src jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                 jcr:primaryType="jnt:folder">
+                        <main jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                     jcr:primaryType="jnt:folder">
+                            <resources jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                             jcr:primaryType="jnt:folder">
+                                <jnt_template jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                                   jcr:primaryType="jnt:nodeTypeFolder">
+                                    <html jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                              jcr:primaryType="jnt:templateTypeFolder">
+                                        <template.test.jsp jcr:primaryType="jnt:viewFile"/>
+                                    </html>
+                                </jnt_template>
+                            </resources>
+                        </main>
+                    </src>
+                </sources>
+                
+                <portlets jcr:primaryType="jnt:portletFolder"/>
+                <files jcr:primaryType="jnt:folder"/>
+                <contents jcr:primaryType="jnt:contentFolder"/>
+                <templates jcr:primaryType="jnt:templatesFolder">
+                    <files jcr:primaryType="jnt:folder">
+                        <themes jcr:primaryType="jnt:folder">
+                            <default jcr:primaryType="jnt:folder"/>
+                        </themes>
+                    </files>
+                    <contents jcr:primaryType="jnt:contentFolder"/>
+                    <base j:theme="/modules/test/templates/files/themes/default"
+                  j:view="test"
+                  jcr:mixinTypes="jmix:theme"
+                  jcr:primaryType="jnt:template">
+                        <home jcr:primaryType="jnt:pageTemplate"/>
+                        <simple jcr:primaryType="jnt:pageTemplate"/>
+                        <pagecontent jcr:primaryType="jnt:contentList">
+                            <top columnsType="nogrid"
+                       gridLayout="fixed-width"
+                       jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createSection"
+                       jcr:primaryType="bootstrap3nt:columns"
+                       sectionCssClass="top"
+                       sectionElement="div">
+                                <top jcr:primaryType="jnt:contentList">
+                                    <login j:displayLoginButton="false"
+                               j:displayRememberMeButton="false"
+                               jcr:primaryType="jnt:loginForm">
+                                        <j:translation_ru_RU jcr:language="ru_RU"
+                                                jcr:primaryType="jnt:translation"
+                                                jcr:title="login"/>
+                                    </login>
+                                </top>
+                            </top>
+                            <header columnsType="nogrid"
+                          jcr:mixinTypes="bootstrap3mix:createSection"
+                          jcr:primaryType="bootstrap3nt:columns"
+                          sectionElement="div"
+                          sectionRole="header">
+                                <header jcr:primaryType="jnt:contentList">
+                                    <navigation-menu jcr:mixinTypes="bootstrap3mix:navbarAdvanced"
+                                         jcr:primaryType="bootstrap3nt:navbar"
+                                         navbarClass="navbar navbar-default navbar-static-top"
+                                         ulClass="nav navbar-nav navbar-right"/>
+                                </header>
+                            </header>
+                        </pagecontent>
+                    </base>
+                    <content-template j:applyOn="jnt:content"
+                              j:hiddenTemplate="true"
+                              j:priority="1"
+                              j:view="test"
+                              jcr:primaryType="jnt:contentTemplate">
+                        <pagecontent jcr:primaryType="jnt:contentList">
+                            <main-resource-display j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
+                        </pagecontent>
+                    </content-template>
+                </templates>
+                
+                <home j:isHomePage="true"
+               j:templateName="home"
+               jcr:primaryType="jnt:page">
+                    <j:translation_en jcr:language="en"
+                              jcr:mixinTypes="mix:title"
+                              jcr:primaryType="jnt:translation"
+                              jcr:title="Home"/>
+                </home>
+            </test>
+    </modules>
+</content>
